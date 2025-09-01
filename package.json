@@ -1,0 +1,35 @@
+{
+  "name": "genexus8-support",
+  "displayName": "GeneXus 8 Support",
+  "publisher": "seu-usuario",
+  "version": "0.0.3",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Programming Languages", "Themes"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "genexus8",
+        "aliases": ["GeneXus 8", "genexus8"],
+        "extensions": [".gx", ".gx8", ".prc", ".src", ".prg"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "genexus8",
+        "scopeName": "source.genexus8",
+        "path": "./syntaxes/genexus8.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      { "language": "genexus8", "path": "./snippets/genexus8.code-snippets.json" }
+    ],
+    "themes": [
+      {
+        "label": "Genexus8 Test",
+        "uiTheme": "vs-dark",
+        "path": "./themes/genexus8-test-color-theme.json"
+      }
+    ]
+  }
+}

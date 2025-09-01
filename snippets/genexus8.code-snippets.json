@@ -1,0 +1,68 @@
+{
+  "If / EndIf": {
+    "prefix": "if",
+    "body": [
+      "If ${1:condicao}",
+      "\t${0:// corpo}",
+      "EndIf"
+    ],
+    "description": "Bloco If ... EndIf"
+  },
+  "ElseIf": {
+    "prefix": "elseif",
+    "body": ["ElseIf ${1:condicao}"],
+    "description": "ElseIf"
+  },
+  "Else": {
+    "prefix": "else",
+    "body": ["Else"],
+    "description": "Else"
+  },
+  "For Each / Where / EndFor": {
+    "prefix": "foreach",
+    "body": [
+      "For Each ${1:TabelaOuAlias}",
+      "\tWhere ${2:condicao}",
+      "\t${0:// corpo}",
+      "EndFor"
+    ],
+    "description": "For Each com Where e EndFor"
+  },
+  "Do / EndDo": {
+    "prefix": "do",
+    "body": [
+      "Do ${1:'Rotina'${2:}}",
+      "\t${0:// corpo}",
+      "EndDo"
+    ],
+    "description": "Bloco Do ... EndDo"
+  },
+  "While / EndWhile": {
+    "prefix": "while",
+    "body": [
+      "While ${1:condicao}",
+      "\t${0:// corpo}",
+      "EndWhile"
+    ],
+    "description": "Bloco While ... EndWhile"
+  },
+  "Sub / EndSub": {
+    "prefix": "sub",
+    "body": [
+      "Sub '${1:NomeDaRotina}'",
+      "\t${0:// corpo}",
+      "EndSub"
+    ],
+    "description": "Declara Sub ... EndSub"
+  },
+  "Parm": {
+    "prefix": "parm",
+    "body": ["Parm(${1:&param1}${2:, &param2});"],
+    "description": "Parm(...)"
+  },
+  "Msg": {
+    "prefix": "msg",
+    "body": ["msg(${1:\"texto\"});"],
+    "description": "msg(\"...\")"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "scopeName": "source.genexus8",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#variables" },
+    { "include": "#subblocks" },
+    { "include": "#foreachLine" },
+    { "include": "#flow" },
+    { "include": "#keywords" },
+    { "include": "#query" },
+    { "include": "#functions" },
+    { "include": "#attributes" }
+  ],
+
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash.genexus8", "match": "//.*$" },
+        { "name": "comment.block.genexus8", "begin": "/\\*", "end": "\\*/" }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        { "name": "string.quoted.double.genexus8", "begin": "\"", "end": "\"", "patterns": [{ "name": "constant.character.escape.genexus8", "match": "\\\\." }] },
+        { "name": "string.quoted.single.genexus8", "begin": "'", "end": "'", "patterns": [{ "name": "constant.character.escape.genexus8", "match": "\\\\." }] }
+      ]
+    },
+
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.genexus8", "match": "\\b\\d+(?:\\.\\d+)?\\b" }
+      ]
+    },
+
+    "variables": {
+      "patterns": [
+        { "name": "variable.other.genexus8", "match": "&[A-Za-z_][A-Za-z0-9_]*\\b" }
+      ]
+    },
+
+    "subblocks": {
+      "patterns": [
+        {
+          "name": "meta.sub.genexus8",
+          "begin": "^\\s*(?i:(Sub))\\s*(')",
+          "beginCaptures": {
+            "1": { "name": "keyword.declaration.sub.genexus8" },
+            "2": { "name": "punctuation.definition.string.begin.genexus8" }
+          },
+          "end": "(')\\s*$",
+          "endCaptures": { "1": { "name": "punctuation.definition.string.end.genexus8" } },
+          "patterns": [
+            { "name": "entity.name.section.sub.genexus8", "match": "[^']+" }
+          ]
+        },
+        { "name": "keyword.declaration.sub.genexus8", "match": "^\\s*(?i:EndSub)\\b" }
+      ]
+    },
+
+    "foreachLine": {
+      "patterns": [
+        {
+          "name": "meta.foreach.genexus8",
+          "begin": "^\\s*(?i:(For\\s+Each))\\s+",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.loop.genexus8" }
+          },
+          "end": "$",
+          "patterns": [
+            { "name": "support.class.entity.genexus8", "match": "\\b[A-Za-z][A-Za-z0-9_]*\\b" }
+          ]
+        }
+      ]
+    },
+
+    "flow": {
+      "patterns": [
+        { "name": "keyword.control.conditional.genexus8", "match": "\\b(?i:If|ElseIf|Else|EndIf|Case|When|Otherwise|EndCase)\\b" },
+        { "name": "keyword.control.loop.genexus8", "match": "\\b(?i:For\\s+Each|For|To|DownTo|Step|EndFor|While|EndWhile|Break|Continue)\\b" },
+        { "name": "keyword.control.flow.genexus8", "match": "\\b(?i:Return|Exit|Call|Do|EndDo)\\b" },
+        { "name": "keyword.other.block.genexus8", "match": "\\b(?i:Composite|EndComposite|New|End)\\b" }
+      ]
+    },
+
+    "keywords": {
+      "patterns": [
+        { "name": "keyword.control.conditional.genexus8", "match": "\\b(?i:If|ElseIf|Else|EndIf|Case|When|Otherwise|EndCase)\\b" },
+        { "name": "keyword.control.loop.genexus8", "match": "\\b(?i:For\\s+Each|For|To|DownTo|Step|EndFor|While|EndWhile|Do|EndDo|Break|Continue)\\b" },
+        { "name": "keyword.control.flow.genexus8", "match": "\\b(?i:Return|Exit|Call|Do)\\b" },
+
+        { "name": "keyword.declaration.sub.genexus8", "match": "\\b(?i:Sub|EndSub)\\b" },
+        { "name": "keyword.other.block.genexus8", "match": "\\b(?i:Composite|EndComposite|New|End|Try|Catch|Finally|Throw)\\b" },
+        { "name": "keyword.other.misc.genexus8", "match": "\\b(?i:Parm|In|Out)\\b" },
+
+        { "name": "keyword.other.query.genexus8", "match": "\\b(?i:Where|Order\\s+By|Group\\s+By|Having|For\\s+Update|Distinct)\\b" },
+
+        { "name": "keyword.other.transaction.genexus8", "match": "\\b(?i:Commit|Rollback)\\b" }
+      ]
+    },
+
+
+    "query": {
+      "patterns": [
+        { "name": "keyword.other.query.genexus8", "match": "\\b(?i:Where|Order\\s+By|Group\\s+By|Having)\\b" }
+      ]
+    },
+
+    "functions": {
+      "patterns": [
+        { "name": "support.function.genexus8", "match": "\\b(?i:Year|Month|Day|Hour|Minute|Second|Now|Today|eom|CtoD|DtoC|AddYears|AddMonths|AddDays|AddHours)\\b(?=\\s*\\()" },
+        { "name": "support.function.genexus8", "match": "\\b(?i:Trim|LTrim|RTrim|Str|Val|SubStr|ToUpper|ToLower|Len|PadL|PadR|Replace)\\b(?=\\s*\\()" },
+        { "name": "support.function.genexus8", "match": "\\b(?i:Round|Ceil|Floor|Abs|Max|Min|Avg|Sum|Count)\\b(?=\\s*\\()" },
+        { "name": "support.function.genexus8", "match": "\\b(?i:Msg|Sleep|SleepMs|Guid|Random)\\b(?=\\s*\\()" }
+      ]
+    },
+
+    "attributes": {
+      "patterns": [
+        { "name": "support.variable.attribute.genexus8", "match": "\\b[A-Za-z][A-Za-z0-9_]*\\b(?=\\s*(=|<|>|<=|>=|<>))" },
+        { "name": "support.variable.attribute.genexus8", "match": "\\b[A-Z][A-Za-z0-9_]*\\b" }
+      ]
+    },
+
+    "types": {
+      "patterns": [
+        { "name": "storage.type.genexus8", "match": "\\b(?i:Boolean|Numeric|Integer|Int|Real|Decimal|VarChar|Char|LongVar|Blob|Date|DateTime)\\b" },
+        { "name": "constant.language.null.genexus8", "match": "\\b(?i:Null)\\b" }
+      ]
+    }
+  }
+}
