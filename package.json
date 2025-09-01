@@ -31,5 +31,9 @@
         "path": "./themes/genexus8-test-color-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhenisushi/extension-vscode.git"
   }
 }
