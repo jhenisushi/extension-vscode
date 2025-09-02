@@ -7,7 +7,6 @@ Extensão para o Visual Studio Code que adiciona **suporte básico à linguagem 
 - **Tema dedicado** com cores harmonizadas (estilo Dark+/C-like)
 - **Indentação básica** (abertura/fechamento de blocos)
 
----
 
 ## Instalação (local)
 
@@ -37,7 +36,6 @@ Extensão para o Visual Studio Code que adiciona **suporte básico à linguagem 
 
 4. Abra um arquivo `.gx`, `.prc`, `.src`, `.prg` ou `.gx8` → a coloração deve ser aplicada.
 
----
 
 ## Uso
 
@@ -48,18 +46,16 @@ Extensão para o Visual Studio Code que adiciona **suporte básico à linguagem 
   * **Snippets**: digite `if`, `foreach`, `sub` e pressione `Tab` para expandir.
   * **Indentação** automática em blocos (`If/EndIf`, `For Each/EndFor`, etc.).
 
----
 
 ## Roadmap
 
-* [x] Syntax highlighting
-* [x] Tema dedicado
-* [x] Snippets básicos
-* [ ] Formatter (alinhamento automático, estilo Prettier)
-* [ ] Melhorar auto-complete de variáveis/atributos
-* [ ] Publicar no Marketplace
+- [x] Syntax highlighting
+- [x] Tema dedicado
+- [x] Snippets básicos
+- [ ] Formatter (alinhamento automático, estilo Prettier)
+- [ ] Melhorar auto-complete de variáveis/atributos
+- [ ] Publicar no Marketplace
 
----
 
 ## Contribuição
 
