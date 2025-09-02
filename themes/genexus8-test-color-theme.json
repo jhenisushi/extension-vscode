@@ -4,24 +4,72 @@
   "type": "dark",
   "colors": {},
   "tokenColors": [
-    { "scope": ["comment.line.double-slash.genexus8","comment.block.genexus8"], "settings": { "foreground": "#6A6A6A", "fontStyle": "italic" } },
-    { "scope": ["string.quoted.double.genexus8","string.quoted.single.genexus8"], "settings": { "foreground": "#CE9178" } },
-    { "scope": ["constant.numeric.genexus8","constant.language.genexus8","constant.language.null.genexus8"], "settings": { "foreground": "#B5CEA8" } },
-    { "scope": ["variable.other.genexus8"], "settings": { "foreground": "#9CDCFE" } },
+    { 
+      "scope": [
+        "comment.line.double-slash.genexus8",
+        "comment.block.genexus8"
+      ], 
+      "settings": { "foreground": "#6A6A6A", "fontStyle": "italic" } 
+    },
+    { 
+      "scope": [
+        "string.quoted.double.genexus8",
+        "string.quoted.single.genexus8"
+      ], 
+      "settings": { "foreground": "#CE9178" } 
+    },
+    { 
+      "scope": [
+        "constant.numeric.genexus8",
+        "constant.language.genexus8",
+        "constant.language.null.genexus8"
+      ], 
+      "settings": { "foreground": "#B5CEA8" } 
+    },
+    { 
+      "scope": ["variable.other.genexus8"], 
+      "settings": { "foreground": "#9CDCFE" } 
+    },
 
     /* keywords (todos os grupos mapeados) */
-    { "scope": ["keyword.control.conditional.genexus8","keyword.control.loop.genexus8","keyword.control.flow.genexus8","keyword.other.query.genexus8","keyword.other.block.genexus8","keyword.other.misc.genexus8","keyword.declaration.sub.genexus8"], "settings": { "foreground": "#569CD6" } },
+    { 
+      "scope": [
+        "keyword.control.conditional.genexus8",
+        "keyword.control.loop.genexus8",
+        "keyword.control.flow.genexus8",
+        "keyword.other.query.genexus8",
+        "keyword.other.block.genexus8",
+        "keyword.other.misc.genexus8",
+        "keyword.declaration.sub.genexus8"
+      ], 
+      "settings": { "foreground": "#569CD6" } 
+    },
 
     /* nome da Sub */
-    { "scope": ["entity.name.section.sub.genexus8"], "settings": { "foreground": "#DCDCAA", "fontStyle": "bold" } },
+    { 
+      "scope": ["entity.name.section.sub.genexus8"], 
+      "settings": { "foreground": "#DCDCAA", "fontStyle": "bold" } 
+    },
 
     /* funções do GX */
-    { "scope": ["support.function.genexus8"], "settings": { "foreground": "#DCDCAA" } },
+    { 
+      "scope": ["support.function.genexus8"], 
+      "settings": { "foreground": "#DCDCAA" } 
+    },
 
     /* entidade do For Each e campos/atributos (mesma cor) */
-    { "scope": ["support.class.entity.genexus8","support.variable.attribute.genexus8"], "settings": { "foreground": "#4EC9B0" } },
+    { 
+      "scope": [
+        "support.class.entity.genexus8",
+        "support.variable.attribute.genexus8"
+        ], 
+      "settings": { "foreground": "#4EC9B0" } 
+    },
 
     /* tipos (opcional) */
-    { "scope": ["storage.type.genexus8"], "settings": { "foreground": "#4EC9B0" } }
+    { 
+      "scope": ["storage.type.genexus8"], 
+      "settings": { "foreground": "#4EC9B0" } 
+    }
   ]
 }
