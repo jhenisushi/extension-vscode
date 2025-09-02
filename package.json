@@ -5,6 +5,11 @@
   "version": "0.0.3",
   "engines": { "vscode": "^1.90.0" },
   "categories": ["Programming Languages", "Themes"],
+  "keywords": ["genexus","geneXus 8","gx","syntax","theme"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhenisushi/extension-vscode.git"
+  },
   "contributes": {
     "languages": [
       {
@@ -31,9 +36,5 @@
         "path": "./themes/genexus8-test-color-theme.json"
       }
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jhenisushi/extension-vscode.git"
   }
 }

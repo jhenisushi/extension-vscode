@@ -1,0 +1,28 @@
+# Node / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code Extension packaging
+*.vsix
+
+# Build artifacts
+out/
+dist/
+
+# MacOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code settings (se não quiser compartilhar)
+.vscode/
+
+# Logs
+*.log
+
+# Coverage / test output
+coverage/
+*.lcov

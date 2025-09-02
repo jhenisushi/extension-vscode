@@ -12,7 +12,7 @@ Extensão para o Visual Studio Code que adiciona **suporte básico à linguagem 
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/genexus8-support.git
+   git clone https://github.com/jhenisushi/extension-vscode.git
    cd genexus8-support
     ```
 
